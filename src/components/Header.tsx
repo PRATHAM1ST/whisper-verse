@@ -10,7 +10,7 @@ export default function Header() {
       <div className="flex justify-center items-center gap-2">
         <Image
           className="md:h-[50px] md:w-[50px]"
-          src={require("@/assets/logo.svg")}
+          src={require("@/assets/svg/logo.svg")}
           alt="logo"
           width={40}
           height={40}
@@ -23,7 +23,7 @@ export default function Header() {
         <Button size="sm">
           <Image
             className="text-white"
-            src={require("@/assets/up-arow-circle.svg")}
+            src={require("@/assets/svg/up-arow-circle.svg")}
             alt="logo"
             width={14}
             height={14}
