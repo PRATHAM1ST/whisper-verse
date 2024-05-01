@@ -77,7 +77,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-col justify-center items-center gap-16 bg-primary py-8 px-6 rounded-t-3xl border-4 border-black md:px-16 lg:px-24">
       <div className="md:flex flex-row justify-between w-full">
-        <div className="flex justify-center items-center lg:justify-start lg:h-full gap-6 py-6 lg:p-0">
+        <Link href="/" className="flex justify-center items-center lg:justify-start lg:h-full gap-6 py-6 lg:p-0">
           <Image
             src={require("@/assets/svg/logo.svg")}
             alt="logo"
@@ -92,7 +92,7 @@ export default function Footer() {
           >
             Whisper Verse
           </h1>
-        </div>
+        </Link>
 
         <div className="flex flex-col justify-center items-center md:flex-wrap md:justify-start md:items-start lg:flex-row gap-4">
           {footerTitles.jsonKeys.map((key, idx) => (

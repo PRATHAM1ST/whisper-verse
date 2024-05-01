@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="flex justify-between items-center py-8 px-6 md:px-16 lg:px-24">
-      <div className="flex justify-center items-center gap-2">
+      <Link href="/" className="flex justify-center items-center gap-2">
         <Image
           className="md:h-[50px] md:w-[50px]"
           src={require("@/assets/svg/logo.svg")}
@@ -18,7 +18,7 @@ export default function Header() {
         <h1 className={cn("text-xl md:text-3xl", titleFont.className)}>
           Whisper Verse
         </h1>
-      </div>
+      </Link>
       <Link href="/new">
         <Button size="sm">
           <Image
