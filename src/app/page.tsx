@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -45,7 +46,11 @@ export default function Home() {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`flex ${idx % 2 ? "flex-row-reverse" : "flex-row"} text-3xl uppercase font-bold gap-4 justify-center items-center py-16 md:py-20 text-right bg-${link.color} w-full border-4 border-black rounded-lg shadow-lg hover:shadow-0 transition-shadow duration-300 ease-out`}
+                className={cn(
+                  `flex text-3xl uppercase font-bold gap-4 justify-center items-center py-16 md:py-20 text-right w-full border-4 border-black rounded-lg shadow-lg hover:shadow-0 transition-shadow duration-300 ease-out`,
+                  `bg-${link.color} `, 
+                  idx % 2 ? "flex-row-reverse" : "flex-row"
+                )}
               >
                 {link.title.split(" ").map((word) => (
                   <>
