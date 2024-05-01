@@ -6,39 +6,33 @@ import Link from "next/link";
 
 export default function Category({ params }: { params: { category: string } }) {
   const landingPageLinks = [
-    [
-      {
-        title: "Love Stories",
-        icon: "heart.svg",
-        color: "pink-200",
-        href: "/love-stories",
-      },
-      {
-        title: "Happy Stories",
-        icon: "party.svg",
-        color: "purple-200",
-        href: "/happy-stories",
-      },
-    ],
-    [
-      {
-        title: "Tragic Stories",
-        icon: "play.svg",
-        color: "amber-700",
-        href: "/tragic-stories",
-      },
-      {
-        title: "Horror Stories",
-        icon: "eye.svg",
-        color: "green-200",
-        href: "/horror-stories",
-      },
-    ],
+    {
+      title: "Love Stories",
+      icon: "heart.svg",
+      color: "pink-200",
+      href: "/love-stories",
+    },
+    {
+      title: "Happy Stories",
+      icon: "party.svg",
+      color: "purple-200",
+      href: "/happy-stories",
+    },
+    {
+      title: "Tragic Stories",
+      icon: "play.svg",
+      color: "amber-700",
+      href: "/tragic-stories",
+    },
+    {
+      title: "Horror Stories",
+      icon: "eye.svg",
+      color: "green-200",
+      href: "/horror-stories",
+    },
   ];
 
-  const titleObject = landingPageLinks.find((links) =>
-    links.find((link) => link && link.href === `/${params.category}`)
-  )?.[0];
+  const titleObject = landingPageLinks.find((link) => link.href === `/${params.category}`);
 
   const storiesList = [
     [
@@ -60,14 +54,16 @@ export default function Category({ params }: { params: { category: string } }) {
 
       {
         title: "The Smile Project",
-        description: "Witness the incredible ripple effect of a simple idea - a project where people commit to spreading smiles through random acts of kindness. From leaving uplifting notes to surprising strangers with small gifts...",
+        description:
+          "Witness the incredible ripple effect of a simple idea - a project where people commit to spreading smiles through random acts of kindness. From leaving uplifting notes to surprising strangers with small gifts...",
         image: "the-smile-project.jpg",
         href: "/the-smile-project",
         tags: ["Kindness", "Community", "Happiness", "RandomActsOfKindness"],
         likes: "200k",
         views: "7 million",
-      }
-    ],[
+      },
+    ],
+    [
       {
         title: "The Last Dance",
         description:
@@ -87,8 +83,8 @@ export default function Category({ params }: { params: { category: string } }) {
         tags: ["Fantasy", "Regrets", "SecondChances", "LifeLessons"],
         likes: "250k",
         views: "10 million",
-      }
-    ]
+      },
+    ],
   ];
 
   return (
@@ -182,7 +178,7 @@ export default function Category({ params }: { params: { category: string } }) {
                       alt="read more"
                       height={36}
                       width={36}
-                      />
+                    />
                   </div>
                 </div>
               </Link>
