@@ -75,7 +75,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex flex-col justify-center items-center gap-16 bg-primary py-8 px-6 rounded-t-3xl border-4 border-black md:px-16 lg:px-24">
+    <footer className="flex flex-col justify-center items-center gap-16 bg-primary dark:bg-secondary py-8 px-6 rounded-t-3xl border-4 border-black dark:border-secondary-foreground md:px-16 lg:px-24">
       <div className="md:flex flex-row justify-between w-full">
         <Link href="/" className="flex justify-center items-center lg:justify-start lg:h-full gap-6 py-6 lg:p-0">
           <Image
@@ -83,6 +83,7 @@ export default function Footer() {
             alt="logo"
             width={70}
             height={70}
+            className="dark:invert"
           />
           <h1
             className={cn(

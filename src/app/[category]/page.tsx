@@ -97,7 +97,7 @@ export default function Category({ params }: { params: { category: string } }) {
               alt={titleObject?.title ?? ""}
               height={14}
               width={14}
-              className="-rotate-90"
+              className="-rotate-90 dark:invert"
             />
             Back To Categories
           </Button>
@@ -121,7 +121,7 @@ export default function Category({ params }: { params: { category: string } }) {
               <Link
                 key={story.title}
                 href={story.href}
-                className={`flex flex-col gap-4 justify-start items-start w-full border-4 border-black rounded-lg shadow-lg hover:shadow-0 transition-shadow duration-300 ease-out overflow-hidden`}
+                className={`flex flex-col gap-4 justify-start items-start w-full border-4 border-black dark:border-secondary-foreground rounded-lg shadow-lg dark:shadow-dark-foreground hover:shadow-0 transition-shadow duration-300 ease-out overflow-hidden`}
               >
                 <Image
                   src={
@@ -146,7 +146,7 @@ export default function Category({ params }: { params: { category: string } }) {
                     {story.tags.map((tag) => (
                       <small
                         key={tag}
-                        className="bg-gray-200 text-gray-800 px-2 py-1 rounded-full text-xs"
+                        className="bg-gray-200 dark:text-dark-foreground text-gray-800 px-2 py-1 rounded-full text-xs"
                       >
                         {tag}
                       </small>
@@ -154,7 +154,7 @@ export default function Category({ params }: { params: { category: string } }) {
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="flex py-4 gap-4">
-                      <h3 className="text-gray-800 flex gap-2 justify-center items-center">
+                      <h3 className="text-gray-800 dark:text-secondary-foreground flex gap-2 justify-center items-center">
                         <Image
                           src={require("@/assets/svg/heart.svg")}
                           alt="likes"
@@ -163,12 +163,13 @@ export default function Category({ params }: { params: { category: string } }) {
                         />
                         {story.likes}
                       </h3>
-                      <h3 className="text-gray-800 flex gap-2 justify-center items-center">
+                      <h3 className="text-gray-800 dark:text-secondary-foreground flex gap-2 justify-center items-center">
                         <Image
                           src={require("@/assets/svg/eye.svg")}
                           alt="views"
-                          height={18}
+                          height={18}                      
                           width={18}
+                          className="dark:invert"
                         />
                         {story.views}
                       </h3>

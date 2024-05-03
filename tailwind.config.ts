@@ -28,8 +28,8 @@ const config = {
           foreground: "hsl(0, 0%, 0%)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(268, 69%, 43%)",
+          foreground: "hsl(0, 0%, 100%)",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -51,6 +51,10 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        dark:{
+          DEFAULT: "hsl(0, 0%, 20%)",
+          foreground: "hsl(0, 0%, 40%)",
+        }
       },
       borderRadius: {
         none: "0",

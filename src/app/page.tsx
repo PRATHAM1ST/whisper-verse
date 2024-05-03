@@ -47,7 +47,7 @@ export default function Home() {
                 key={link.title}
                 href={link.href}
                 className={cn(
-                  `flex text-3xl uppercase font-bold gap-4 justify-center items-center py-16 md:py-20 text-right w-full border-4 border-black rounded-lg shadow-lg hover:shadow-0 transition-shadow duration-300 ease-out`,
+                  `flex text-3xl uppercase font-bold gap-4 justify-center items-center py-16 md:py-20 text-right w-full border-4 border-black dark:border-secondary-foreground rounded-lg shadow-lg dark:shadow-dark-foreground hover:shadow-0 transition-shadow duration-300 ease-out`,
                   `bg-${link.color} `, 
                   idx % 2 ? "flex-row-reverse" : "flex-row"
                 )}
