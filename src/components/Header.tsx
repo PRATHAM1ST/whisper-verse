@@ -16,7 +16,7 @@ export default function Header() {
           width={40}
           height={40}
         />
-        <h1 className={cn("text-xl md:text-3xl", titleFont.className)}>
+        <h1 className={cn("hidden md:block text-xl md:text-3xl", titleFont.className)}>
           Whisper Verse
         </h1>
       </Link>
