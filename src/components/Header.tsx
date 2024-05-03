@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import ThemeToggle from "./themeButton";
 
-export default function Header() {
+export default function Header({ url }: { url: string} ) {
   return (
     <header className="flex justify-between items-center py-8 px-6 md:px-16 lg:px-24">
       <Link href="/" className="flex justify-center items-center gap-2">
@@ -16,7 +16,12 @@ export default function Header() {
           width={40}
           height={40}
         />
-        <h1 className={cn("hidden md:block text-xl md:text-3xl", titleFont.className)}>
+        <h1
+          className={cn(
+            "hidden md:block text-xl md:text-3xl",
+            titleFont.className
+          )}
+        >
           Whisper Verse
         </h1>
       </Link>
