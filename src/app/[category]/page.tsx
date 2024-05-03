@@ -120,7 +120,7 @@ export default function Category({ params }: { params: { category: string } }) {
             {stories.map((story) => (
               <Link
                 key={story.title}
-                href={story.href}
+                href={`${params.category}/${story.href}`}
                 className={`flex flex-col gap-4 justify-start items-start w-full border-4 border-black dark:border-secondary-foreground rounded-lg shadow-lg dark:shadow-dark-foreground hover:shadow-0 transition-shadow duration-300 ease-out overflow-hidden`}
               >
                 <Image
