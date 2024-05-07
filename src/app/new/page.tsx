@@ -1,7 +1,11 @@
 import Header from "@/components/Header";
+import TagsMakerInput from "@/components/TagsMakerInput";
+import TextEditor from "@/components/TextEditor";
+import AudioSelection from "@/components/audioSelection";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Select,
   SelectContent,
@@ -39,7 +43,6 @@ export default function New() {
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
-                  <SelectLabel>Stories</SelectLabel>
                   {categories.map((category, idx) => (
                     <SelectItem key={idx} value={category}>
                       {category}
@@ -50,6 +53,14 @@ export default function New() {
             </Select>
           </div>
           <div>
+            <Label htmlFor="title">The story*</Label>
+            <TextEditor story="Once upon a time..." />
+          </div>
+          <div>
+            <Label htmlFor="title">Give Tags to the story*</Label>
+            <TagsMakerInput />
+          </div>
+          <div>
             <Label htmlFor="title">Hero image*</Label>
             <Input
               type="file"
@@ -58,6 +69,12 @@ export default function New() {
               placeholder="Choose a hero image"
               required
             />
+          </div>
+          <div>
+            <Label htmlFor="title">Audio*</Label>
+            <div className="flex gap-4">
+              <AudioSelection />
+            </div>
           </div>
           <div className="flex flex-col justify-start items-start gap-2 py-4">
             <h3 className="uppercase font-semibold text-center tracking-widest text-xl">
@@ -119,7 +136,6 @@ export default function New() {
               </li>
             </div>
           </div>
-
           <Button type="submit" size="lg">
             Accept and Upload the story
           </Button>

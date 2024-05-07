@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import ThemeToggle from "./themeButton";
 import { Cross2Icon } from "@radix-ui/react-icons";
+import GoBackButton from "./gobackButton";
 
 export default function Header({ url }: { url: string }) {
   return (
@@ -29,12 +30,7 @@ export default function Header({ url }: { url: string }) {
       <div className="flex justify-center items-center gap-3">
         <ThemeToggle />
         {url === "/new" ? (
-          <Link href="/">
-            <Button size="sm" variant="destructive">
-              <Cross2Icon />
-              Cancel Go Back
-            </Button>
-          </Link>
+          <GoBackButton />
         ) : (
           <Link href="/new">
             <Button size="sm">
